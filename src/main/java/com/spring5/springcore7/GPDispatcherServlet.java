@@ -250,15 +250,15 @@ public class GPDispatcherServlet extends HttpServlet {
 //            doScanner(scaPackage);
 //            for (String className : mapping.keySet()){
 //                if (!className.contains(".")){continue;}
-//                Class<?> clazz = Class.forName(className);
-//                if (clazz.isAnnotationPresent(GPController.class)){
-//                    mapping.put(className,clazz.newInstance());
+//                Class<?> notinitialization = Class.forName(className);
+//                if (notinitialization.isAnnotationPresent(GPController.class)){
+//                    mapping.put(className,notinitialization.newInstance());
 //                    String baseUrl = "";
-//                    if (clazz.isAnnotationPresent(GPRequestMapping.class)){
-//                        GPRequestMapping requestMapping = clazz.getAnnotation(GPRequestMapping.class);
+//                    if (notinitialization.isAnnotationPresent(GPRequestMapping.class)){
+//                        GPRequestMapping requestMapping = notinitialization.getAnnotation(GPRequestMapping.class);
 //                        baseUrl = requestMapping.value();
 //                    }
-//                    Method[] methods = clazz.getMethods();
+//                    Method[] methods = notinitialization.getMethods();
 //                    for (Method method : methods) {
 //                        if (!method.isAnnotationPresent(GPRequestMapping.class)){continue;}
 //                        GPRequestMapping requestMapping = method.getAnnotation(GPRequestMapping.class);
@@ -266,13 +266,13 @@ public class GPDispatcherServlet extends HttpServlet {
 //                        mapping.put(url,method);
 //                        System.out.println("mapped " +url +"," + method);
 //                    }
-//                }else if (clazz.isAnnotationPresent(GPService.class)){
-//                    GPService service = clazz.getAnnotation(GPService.class);
+//                }else if (notinitialization.isAnnotationPresent(GPService.class)){
+//                    GPService service = notinitialization.getAnnotation(GPService.class);
 //                    String beanName = service.value();
-//                    if ("".equals(beanName)){beanName = clazz.getName();}
-//                    Object instance = clazz.newInstance();
+//                    if ("".equals(beanName)){beanName = notinitialization.getName();}
+//                    Object instance = notinitialization.newInstance();
 //                    mapping.put(beanName,instance);
-//                    for (Class<?> i : clazz.getInterfaces()){
+//                    for (Class<?> i : notinitialization.getInterfaces()){
 //                        mapping.put(i.getName(),instance);
 //                    }
 //                }else {
@@ -282,9 +282,9 @@ public class GPDispatcherServlet extends HttpServlet {
 //              //完成依赖注入
 //            for (Object object : mapping.values()){
 //                if (object == null){continue;}
-//                Class clazz = object.getClass();
-//                if (clazz.isAnnotationPresent(GPController.class)){
-//                    Field[] fields = clazz.getFields();
+//                Class notinitialization = object.getClass();
+//                if (notinitialization.isAnnotationPresent(GPController.class)){
+//                    Field[] fields = notinitialization.getFields();
 //                    for (Field field : fields) {
 //                        if (!field.isAnnotationPresent(GPAutowired.class)){continue;}
 //                        GPAutowired autowired = field.getAnnotation(GPAutowired.class);
@@ -292,7 +292,7 @@ public class GPDispatcherServlet extends HttpServlet {
 //                        if ("".equals(beanName)){beanName = field.getType().getName();}
 //                        field.setAccessible(true);
 //                        try {
-//                            field.set(mapping.get(clazz.getName()),mapping.get(beanName));
+//                            field.set(mapping.get(notinitialization.getName()),mapping.get(beanName));
 //                        }catch (IllegalAccessException e){
 //                            e.printStackTrace();
 //                        }
