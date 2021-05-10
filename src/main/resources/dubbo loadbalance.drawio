@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-10T14:10:42.515Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="NTnMsCgFqWYuEWKxFsex" version="14.6.11" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-10T14:14:09.551Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="OoxwIcitf7imwoRe-9oP" version="14.6.11" type="github">
   <diagram id="8TKOvcTrNhX9M16MKKQR" name="Page-1">
     <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -26,6 +26,11 @@
         <mxCell id="kEvLPKEMS0HpsM0WvJd5-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kEvLPKEMS0HpsM0WvJd5-5" target="kEvLPKEMS0HpsM0WvJd5-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="kEvLPKEMS0HpsM0WvJd5-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="kEvLPKEMS0HpsM0WvJd5-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="128" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="kEvLPKEMS0HpsM0WvJd5-5" value="list的长度为1" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="50" y="220" width="155" height="80" as="geometry" />
         </mxCell>
@@ -34,6 +39,9 @@
         </mxCell>
         <mxCell id="kEvLPKEMS0HpsM0WvJd5-7" value="直接返回" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="245" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kEvLPKEMS0HpsM0WvJd5-12" value="执行doSelect方法，具体的负载均衡方法" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="46.5" y="360" width="162" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
