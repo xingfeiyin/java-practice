@@ -1,6 +1,8 @@
 package com.yinxf.java.spi;
 
 
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+
 /**
  * @author yinxf
  * @Date 2021/5/8
@@ -16,5 +18,9 @@ package com.yinxf.java.spi;
 public class DubboSpi {
 
     public static void main(String[] args) {
+
+        ExtensionLoader extensionLoader = ExtensionLoader.getExtensionLoader(NuanNanBobing.class);
+
+        Object extension = extensionLoader.getExtension("");
     }
 }
